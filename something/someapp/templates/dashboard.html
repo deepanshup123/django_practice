@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>dashboard</p>
+    {% for data in datas %}
+    <dl>
+        <dt>{{ forloop.counter }}. {{data.name}}</dt>
+        <dd>{{data.mobile}}</dd>
+        <dd>{{data.email}}</dd>
+        <dd>{{data.message}}</dd>
+        <dd><a href="/edit/{{id.id}}">edit</a></dd>
+        <dd><a href="/delete/{{id.id}}">Delete</a></dd>
+    </dl>
+    {% endfor %}
+</body>
+</html>

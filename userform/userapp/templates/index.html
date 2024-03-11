@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello, django project</h1>
+    <form method="POST" action="/">
+        {% csrf_token %}
+        <label for="username">username :</label>
+        <div>
+            {{ form.username }}
+        </div>
+        <label for="email">email :</label>
+        <div>
+            {{ form.email }}
+        </div>
+        <label for="phonenumber">phonenumber :</label>
+        <div>
+            {{ form.phonenumber }}
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/show">see all user</a>
+</body>
+</html>
