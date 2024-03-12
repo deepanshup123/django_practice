@@ -7,14 +7,15 @@
 </head>
 <body>
     <p>dashboard</p>
+    <p style="float: right;"><a href="/">Form Page</a></p>
     {% for data in datas %}
     <dl>
         <dt>{{ forloop.counter }}. {{data.name}}</dt>
         <dd>{{data.mobile}}</dd>
         <dd>{{data.email}}</dd>
         <dd>{{data.message}}</dd>
-        <dd><a href="/edit/{{id.id}}">edit</a></dd>
-        <dd><a href="/delete/{{id.id}}">Delete</a></dd>
+        <dd><a href="/edit/{{data.id}}">edit</a></dd>
+        <dd><a href="/delete/{{data.id}}">Delete</a></dd>
     </dl>
     {% endfor %}
 </body>

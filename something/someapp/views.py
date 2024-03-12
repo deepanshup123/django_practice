@@ -31,6 +31,7 @@ def edit(request, sid):
         email =  request.POST['email']
         
         Message.objects.filter(id = sid).update(name = username, email = email, mobile = mobile, message= message )
+        
         return redirect('/dashboard')
     
 def delete(request, did):
